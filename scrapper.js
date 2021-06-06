@@ -16,7 +16,7 @@ request("https://www.dineout.co.in/delhi-restaurants/west-delhi/dwarka", functio
                 "Restaurant Name": loadedhtml(RN[i]).text().trim(),
                 "Details": loadedhtml(Detail[i]).text().trim(),
                 "Location" : loadedhtml(Loc[i]).text().trim().trim(),
-                "Image" : "/img/res.png"
+                "Image" : "./img/res.png"
             }
             data.push(obj);
         }
