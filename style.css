@@ -356,10 +356,59 @@ input {
         left: 8px;
     }
 }
-.modal:hover{
+
+.modal:hover {
     width: 26rem;
     height: 22rem;
 }
-.opacity{
+
+.opacity {
     opacity: 1;
+}
+
+.Use {
+    background: black;
+    position: absolute;
+    height: 49%;
+    width: 20%;
+    left: calc(50% - 10%);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 2s ease;
+}
+
+.emailenter {
+    border-radius: 10px;
+}
+
+.passwordenter {
+    border-radius: 10px;
+}
+
+.submit {
+    background: white;
+    height: 13%;
+}
+
+.ep {
+    height: 15%;
+    /* background: red; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    outline: none;
+}
+
+.head {
+    font-size: 42px;
+    height: 18%;
+}
+.blur{
+    filter: blur(10px);
 }

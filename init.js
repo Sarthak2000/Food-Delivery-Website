@@ -1,3 +1,11 @@
+(function initcred() {
+    if (localStorage.getItem("credentials")) {
+
+    } else {
+        localStorage.setItem("credentials",JSON.stringify([]));
+    }
+})()
+
 let myid = 0;
 let Allfav = [];
 function init(arr) {
