@@ -144,4 +144,3 @@ document.querySelector(".signin.design").addEventListener("click", (e) => {
         div.remove();
     })
 })
-// .
