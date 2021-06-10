@@ -1,17 +1,11 @@
 let myid = 0;
 let Allfav = [];
-function init(fav) {
-    // set up local db
-    if (localStorage.getItem("Myfavs") != null) {
-    } else {
-        localStorage.setItem("Myfavs", JSON.stringify(Allfav));
-    }
-    //
-    if (fav) {
-        fav = fav.sort();
+function init(arr) {
+    if (arr) {
+        arr.sort(function (a, b) { return a - b });
         let j = 0;
         for (let i = 0; i < data.length; i++) {
-            if (fav[j] == i) {
+            if (arr[j] == i) {
                 let div = createTemplate(i);
                 div.querySelector(".imgic").src = data[i].Image;
                 div.querySelector(".name").textContent = data[i]['Restaurant Name'];
@@ -30,7 +24,9 @@ function init(fav) {
                         })
                         fav.innerHTML = `<i class="far fa-heart"></i>`;
                     } else {
-                        Allfav.push(fav.id);
+                        console.log(fav.id);
+                        // console.log(Number(fav.id));
+                        // Allfav.push(Number(fav.id));
                         fav.innerHTML = "";
                         fav.classList.add("mine");
                         fav.innerHTML = `<i class="fas fa-heart"></i>`;
@@ -44,6 +40,7 @@ function init(fav) {
         myid = 0;
         let j = 0;
         for (let i = 0; i < data.length; i++) {
+            Allfav.sort(function (a, b) { return a - b });
             let div;
             if (Allfav[j] == i) {
                 div = createTemplate(i, "yes");
@@ -66,7 +63,7 @@ function init(fav) {
                     fav.innerHTML = `<i class="far fa-heart"></i>`;
                     return;
                 }
-                Allfav.push(fav.id);
+                Allfav.push(Number(fav.id));
                 fav.innerHTML = "";
                 fav.classList.add("mine");
                 fav.innerHTML = `<i class="fas fa-heart"></i>`;

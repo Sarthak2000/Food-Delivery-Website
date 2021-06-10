@@ -11,12 +11,14 @@ request("https://www.dineout.co.in/delhi-restaurants/west-delhi/dwarka", functio
         let RN = loadedhtml(".restnt-name.ellipsis");
         let Detail = loadedhtml(".double-line-ellipsis");
         let Loc=loadedhtml(".restnt-loc.ellipsis");
+        let imglink=loadedhtml()
         for (let i = 1; i < RN.length; i++) {
             let obj = {
                 "Restaurant Name": loadedhtml(RN[i]).text().trim(),
                 "Details": loadedhtml(Detail[i]).text().trim(),
                 "Location" : loadedhtml(Loc[i]).text().trim().trim(),
-                "Image" : "./img/res.png"
+                "Image" : "./img/res.png",
+                "id":i-1
             }
             data.push(obj);
         }
