@@ -50,5 +50,3 @@ request("https://www.dineout.co.in/delhi-restaurants/west-delhi/dwarka", functio
         fs.writeFileSync("data.js", JSON.stringify(data));
     }
 });
-
-// .

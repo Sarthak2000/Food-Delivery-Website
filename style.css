@@ -292,15 +292,16 @@ input {
     padding: 1%;
     height: 89%;
     font-size: large;
+    text-decoration: none;
 }
 
 .permissions a:hover {
-    text-decoration: underline;
+    /* text-decoration: none; */
     font-weight: 700;
 }
 
 .info-foots a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-weight: 700;
 }
 
@@ -412,4 +413,5 @@ input {
 .blur{
     filter: blur(10px);
 }
-/* .saas */
+
+.onlogin{justify-content: space-between;padding: 6px;font-size: 20.5px;}

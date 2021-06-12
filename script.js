@@ -39,7 +39,6 @@ favour.addEventListener("click", function (e) {
 
 let allfilters = document.querySelectorAll(".f");
 
-// let curfilter=-1;
 
 for (let i = 0; i < allfilters.length; i++) {
     allfilters[i].addEventListener("click", function (e) {
@@ -67,5 +66,3 @@ for (let i = 0; i < allfilters.length; i++) {
 
     })
 }
-
-// .
